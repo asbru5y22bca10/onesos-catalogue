@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>OneSos Trim | Admin Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="dashboard-navbar">
+
+        <div class="dashboard-nav-container">
+
+            <a
+                href="index.html"
+                class="dashboard-brand"
+            >
+
+                <img
+                    src="icon.png"
+                    alt="OneSos Trim"
+                >
+
+                <div>
+
+                    <strong>
+                        OneSos Trim
+                    </strong>
+
+                    <span>
+                        Admin Panel
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <button
+                id="logoutBtn"
+                class="logout-btn"
+                type="button"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <main class="dashboard-main">
+
+        <div class="dashboard-container">
+
+
+            <!-- ================= HEADING ================= -->
+
+            <div class="dashboard-heading">
+
+                <div>
+
+                    <span>
+                        ADMINISTRATION
+                    </span>
+
+                    <h1>
+                        Product Management
+                    </h1>
+
+                    <p>
+                        Add, edit and manage your OneSos Trim products.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="addProductBtn"
+                    class="primary-btn"
+                    type="button"
+                >
+                    + Add Product
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= PRODUCT TABLE ================= -->
+
+            <section class="admin-products-section">
+
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <h2>
+                            Products
+                        </h2>
+
+                        <p>
+                            Products currently available in the catalogue.
+                        </p>
+
+                    </div>
+
+
+                    <span
+                        id="productCount"
+                        class="product-count"
+                    >
+                        0 Products
+                    </span>
+
+                </div>
+
+
+
+                <div
+                    id="adminProductList"
+                    class="admin-product-list"
+                >
+
+                    <div class="admin-loading">
+
+                        <div class="loader"></div>
+
+                        <p>
+                            Loading products...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ================= ADD / EDIT PRODUCT MODAL ================= -->
+
+    <div
+        id="productFormModal"
+        class="admin-modal hidden"
+    >
+
+        <div class="admin-modal-box">
+
+
+            <!-- CLOSE -->
+
+            <button
+                id="formClose"
+                class="modal-close"
+                type="button"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+
+
+            <div class="admin-modal-content">
+
+
+                <span class="admin-label">
+                    PRODUCT MANAGEMENT
+                </span>
+
+
+                <h2 id="formTitle">
+                    Add New Product
+                </h2>
+
+
+
+                <form id="productForm">
+
+
+                    <!-- ================= CATEGORY ================= -->
+
+                    <div class="form-group">
+
+                        <label for="productCategory">
+                            Category
+                        </label>
+
+                        <select
+                            id="productCategory"
+                            required
+                        >
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- ================= PRODUCT TYPE ================= -->
+
+                    <div class="form-group">
+
+                        <label for="productType">
+                            Product Type
+                        </label>
+
+                        <select
+                            id="productType"
+                            required
+                        >
+
+                            <option value="">
+                                Select Type
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- ================= PRODUCT NAME ================= -->
+
+                    <div class="form-group">
+
+                        <label for="productName">
+                            Product Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="productName"
+                            placeholder="Enter product name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- ================= DESCRIPTION ================= -->
+
+                    <div class="form-group">
+
+                        <label for="productDescription">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="productDescription"
+                            rows="5"
+                            placeholder="Enter product description"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- ================= PRODUCT IMAGE ================= -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Product Image
+                        </label>
+
+
+                        <!-- ================= MOBILE CAMERA ================= -->
+
+                        <input
+                            type="file"
+                            id="productCamera"
+                            accept="image/*"
+                            capture="environment"
+                            hidden
+                        >
+
+
+                        <button
+                            type="button"
+                            id="takePhotoBtn"
+                            class="camera-upload-btn"
+                        >
+                            📷 Take Photo
+                        </button>
+
+
+
+                        <!-- ================= GALLERY / PC ================= -->
+
+                        <input
+                            type="file"
+                            id="productImage"
+                            accept="image/*"
+                        >
+
+
+                        <small>
+                            📱 Mobile: Take a photo or select from gallery.
+                            <br>
+                            💻 PC: Select an image from your computer.
+                        </small>
+
+
+
+                        <!-- ================= NEW IMAGE PREVIEW ================= -->
+
+                        <div
+                            id="newImagePreviewBox"
+                            class="new-image-preview-box hidden"
+                        >
+
+                            <span>
+                                New Image Preview
+                            </span>
+
+                            <img
+                                id="newProductImagePreview"
+                                src=""
+                                alt="New Product Preview"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= CURRENT IMAGE ================= -->
+
+                    <div
+                        id="currentImageBox"
+                        class="current-image-box hidden"
+                    >
+
+                        <span>
+                            Current Image
+                        </span>
+
+                        <img
+                            id="currentProductImage"
+                            src=""
+                            alt="Current Product"
+                        >
+
+                    </div>
+
+
+
+                    <!-- ================= FORM MESSAGE ================= -->
+
+                    <p
+                        id="formMessage"
+                        class="form-message"
+                    ></p>
+
+
+
+                    <!-- ================= SAVE BUTTON ================= -->
+
+                    <button
+                        type="submit"
+                        id="saveProductBtn"
+                        class="admin-save-btn"
+                    >
+                        ADD PRODUCT
+                    </button>
+
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

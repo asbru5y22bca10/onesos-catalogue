@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OneSos Trim | Garment Accessories</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <nav class="nav-links">
+
+                <a href="index.html" class="active">Home</a>
+
+                <a href="index.html#products">Products</a>
+
+                <a href="index.html#about">About</a>
+
+                <a href="index.html#contact">Contact</a>
+
+                <a href="admin.html" class="admin-link">Admin</a>
+
+            </nav>
+
+        </div>
+
+
+        <button class="mobile-menu" id="mobileMenu">
+            ☰
+        </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-container">
+
+                <!-- LEFT -->
+                <div class="hero-content">
+
+                    <span class="hero-label">
+                        ONESOS TRIM · DIGITAL CATALOGUE
+                    </span>
+
+                    <h1>
+                        Your Own Source for
+                        <span>Garment Accessories</span>
+                    </h1>
+
+                    <p>
+                        Explore our collection of premium garment accessories,
+                        fashion trims and quality products designed for
+                        modern apparel manufacturing.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#products" class="primary-btn">
+                            Explore Products
+                        </a>
+
+                        <a href="https://wa.me/919994799931?text=Hello%20OneSos%20Trim%2C%20I%20would%20like%20to%20enquire%20about%20your%20garment%20accessories."
+                            target="_blank" rel="noopener" class="secondary-btn">
+                            Enquire Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT IMAGE -->
+                <div class="hero-image">
+
+                    <div class="hero-image-card">
+
+                        <img src="logo OSS (1).png" alt="OneSos Trim Garment Accessories">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="about-section" id="about">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <span>
+                        ABOUT ONESOS TRIM
+                    </span>
+
+                    <h2>
+                        Quality Accessories.
+                        Reliable Supply.
+                    </h2>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <p>
+                        OneSos Trim is a garment accessories supplier
+                        providing a wide range of products for apparel,
+                        fashion and manufacturing requirements.
+                    </p>
+
+                    <p>
+                        From buttons and zippers to crochet designs,
+                        buckles, patches, laces and decorative accessories,
+                        we help businesses find the right products for
+                        their requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRODUCTS ================= -->
+
+        <section class="products-section" id="products">
+
+            <div class="section-container">
+
+                <!-- Category View -->
+                <div id="categoryView">
+
+                    <div class="products-heading">
+
+                        <div>
+                            <span>OUR COLLECTION</span>
+
+                            <h2>Explore Our Products</h2>
+
+                            <p>
+                                Select a product category to explore our collection.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div id="categoryGrid" class="product-grid">
+
+                        <div class="loading-message">
+
+                            <div class="loader"></div>
+
+                            <p>Loading categories...</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Product Type View -->
+                <div id="typeView" class="catalogue-view hidden">
+
+                    <div class="catalogue-top">
+
+                        <button type="button" id="backToCategories" class="catalogue-back-btn">
+                            ← Back
+                        </button>
+
+                        <div class="products-heading">
+
+                            <span id="selectedCategoryLabel">
+                                CATEGORY
+                            </span>
+
+                            <h2 id="selectedCategoryTitle">
+                                Product Types
+                            </h2>
+
+                            <p>
+                                Select a product type to view available products.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="typeGrid" class="product-grid">
+
+                        <div class="loading-message">
+
+                            <div class="loader"></div>
+
+                            <p>Loading product types...</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Product View -->
+                <div id="productView" class="catalogue-view hidden">
+
+                    <div class="catalogue-top">
+
+                        <button type="button" id="backToTypes" class="catalogue-back-btn">
+                            ← Back
+                        </button>
+
+                        <div class="products-heading">
+
+                            <span id="selectedTypeLabel">
+                                PRODUCT TYPE
+                            </span>
+
+                            <h2 id="selectedTypeTitle">
+                                Products
+                            </h2>
+
+                            <p>
+                                Explore products available in this type.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="productGrid" class="product-grid">
+
+                        <div class="loading-message">
+
+                            <div class="loader"></div>
+
+                            <p>Loading products...</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ENQUIRE ================= -->
+
+        <section class="enquire-section" id="contact">
+
+            <div class="enquire-container">
+
+                <div>
+
+                    <span>
+                        ONESOS TRIM
+                    </span>
+
+                    <h2>
+                        Looking for a specific product?
+                    </h2>
+
+                    <p>
+                        Contact our team for product details,
+                        samples, quantity and pricing.
+                    </p>
+
+                </div>
+
+
+                <a href="https://wa.me/?text=Hello%20OneSos%20Trim%2C%20I%20am%20interested%20in%20your%20products."
+                    target="_blank" class="primary-btn">
+                    Enquire Now
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div>
+
+                <strong>
+                    OneSos Trim
+                </strong>
+
+                <p>
+                    Your Own Source
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Garment Accessories Catalogue
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= PRODUCT MODAL ================= -->
+
+    <div class="product-modal hidden" id="productModal">
+
+        <div class="product-modal-box">
+
+            <button class="modal-close" id="modalClose">
+                ×
+            </button>
+
+
+            <div class="modal-image">
+
+                <img id="modalProductImage" src="" alt="Product">
+
+            </div>
+
+
+            <div class="modal-content">
+
+                <span id="modalProductType">
+                    Product
+                </span>
+
+                <h2 id="modalProductName">
+                    Product Name
+                </h2>
+
+                <p id="modalProductDescription">
+                    Product description
+                </p>
+
+
+                <a id="modalWhatsApp" href="#" target="_blank" class="primary-btn">
+                    Enquire Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

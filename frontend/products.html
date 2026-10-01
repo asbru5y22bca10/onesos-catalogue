@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OneSos Trim | Products</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="products-page">
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="brand">
+
+            <b>
+                <img src="icon.png" alt="OneSos Trim Logo">
+            </b>
+
+            <small>Your Own Source</small>
+
+        </div>
+
+        <a href="#" id="backToCategory" class="back-btn">
+            ← Back
+        </a>
+
+    </header>
+
+
+    <!-- PRODUCT TYPE HERO -->
+    <section class="category-hero">
+
+        <div class="category-hero-content">
+
+            <small class="eyebrow">
+                ONESOS TRIM · DIGITAL CATALOGUE
+            </small>
+
+            <h1 id="typeName">
+                Loading...
+            </h1>
+
+            <p id="typeDescription">
+                Please wait while we load this collection.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="category-products">
+
+        <div class="category-heading">
+
+            <div>
+
+                <small class="eyebrow">
+                    OUR PRODUCTS
+                </small>
+
+                <h2>
+                    Products
+                </h2>
+
+                <p>
+                    Explore our available products and designs.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT GRID -->
+        <div id="productGrid" class="category-grid">
+
+            <div class="loading-box">
+
+                <div class="loader"></div>
+
+                <p>Loading products...</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="category-cta">
+
+        <div>
+
+            <small class="eyebrow">
+                ONESOS TRIM
+            </small>
+
+            <h2>
+                Looking for a specific design?
+            </h2>
+
+            <p>
+                Contact our team for product details,
+                samples, quantity and pricing.
+            </p>
+
+        </div>
+
+        <a
+            href="https://wa.me/?text=Hello%20OneSos%20Trim%2C%20I%20am%20interested%20in%20your%20products."
+            target="_blank"
+            class="primary">
+            Enquire on WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div class="modal hidden" id="productDetail">
+
+        <div class="product-detail-box">
+
+            <button class="close" id="detailClose">
+                ×
+            </button>
+
+            <div class="detail-image-wrap">
+
+                <img
+                    id="detailImage"
+                    src=""
+                    alt="Product">
+
+            </div>
+
+            <div class="detail-content">
+
+                <small
+                    id="detailType"
+                    class="eyebrow">
+                </small>
+
+                <h2 id="detailName"></h2>
+
+                <p id="detailDescription"></p>
+
+                <a
+                    id="detailWhatsApp"
+                    href="#"
+                    target="_blank"
+                    class="primary">
+                    Enquire on WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <b>OneSos Trim</b>
+
+        <span>
+            Professional Garment Accessories Catalogue
+        </span>
+
+    </footer>
+
+
+    <script src="products.js"></script>
+
+</body>
+
+</html>
