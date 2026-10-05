@@ -112,6 +112,9 @@ DATABASES = {
             "DB_PORT",
             "3306"
         ),
+        "OPTIONS": {
+            "ssl": {},
+        },
     }
 }
 
